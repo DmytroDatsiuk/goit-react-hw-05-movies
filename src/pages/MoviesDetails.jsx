@@ -8,7 +8,7 @@ import { GetDetailsMovie } from 'Service/GetMovies';
 const MoviesDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const { movieId } = useParams();
-  const location = useLocation;
+  const location = useLocation();
   const ref = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
