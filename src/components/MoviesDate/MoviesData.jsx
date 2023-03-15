@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { Link } from './MoviesData.styled';
 
 export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
   return (
@@ -11,6 +12,7 @@ export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
               : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsiVE6bpD6TDmfsrz4LwcCRl-TWNy5zq_qFxjkJ3NqeQ4bgotQt5IRpH1m7SBt9f-O1ag&usqp=CAU'
           }
           alt={tag}
+          width={300}
         />
 
         <div>
@@ -29,10 +31,10 @@ export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
       <h2>Additional information</h2>
       <ul>
         <li>
-          <link to="cast">Cast</link>
+          <Link to="cast">Cast</Link>
         </li>
         <li>
-          <link to="reviews">Reviews</link>
+          <Link to="reviews">Reviews</Link>
         </li>
       </ul>
       <Outlet />

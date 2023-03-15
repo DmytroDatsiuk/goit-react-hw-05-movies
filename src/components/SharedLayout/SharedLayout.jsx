@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 // import { Header, Logo, Link, Box } from './SharedLayout.style';
 import { SiThemoviedatabase } from 'react-icons/si';
 import { Box, Header, Link, Logo } from './SharedLayout.style';
+import { Suspense } from 'react';
 
 const SharedLayout = () => {
   return (
@@ -17,7 +18,11 @@ const SharedLayout = () => {
           <Link to="/movies">Movies</Link>
         </nav>
       </Header>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <main>
+          <Outlet />
+        </main>
+      </Suspense>
     </Box>
   );
 };

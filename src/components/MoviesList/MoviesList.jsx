@@ -8,7 +8,7 @@ const MoviesList = ({ movies }) => {
       {movies.map(({ id, poster_path, title }) => {
         return (
           <Item key={id}>
-            <Link to={`/movie/${id}`} state={{ from: location }}>
+            <Link to={`/movies/${id}`} state={{ from: location }}>
               <Img
                 src={
                   poster_path
