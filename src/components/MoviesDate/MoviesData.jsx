@@ -7,7 +7,7 @@ export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
         <img
           src={
             url
-              ? `http://image.tmdb.org/t/p/original${url}`
+              ? `https://image.tmdb.org/t/p/original${url}`
               : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsiVE6bpD6TDmfsrz4LwcCRl-TWNy5zq_qFxjkJ3NqeQ4bgotQt5IRpH1m7SBt9f-O1ag&usqp=CAU'
           }
           alt={tag}

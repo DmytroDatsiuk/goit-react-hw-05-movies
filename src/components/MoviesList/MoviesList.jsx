@@ -12,7 +12,7 @@ const MoviesList = ({ movies }) => {
               <Img
                 src={
                   poster_path
-                    ? `http://image.tmdb.org/t/p/original${poster_path}`
+                    ? `https://image.tmdb.org/t/p/original${poster_path}`
                     : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsiVE6bpD6TDmfsrz4LwcCRl-TWNy5zq_qFxjkJ3NqeQ4bgotQt5IRpH1m7SBt9f-O1ag&usqp=CAU'
                 }
                 alt="poster movie"
