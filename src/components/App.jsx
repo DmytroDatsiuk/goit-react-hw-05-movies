@@ -2,13 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyele';
 import { lazy } from 'react';
 
-// import Home from '../pages/Home';
-// import Movies from '../pages/Movies';
-// import MoviesDetails from '../pages/MoviesDetails';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
 import SharedLayout from './SharedLayout/SharedLayout';
-
 const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));
 const MoviesDetails = lazy(() => import('../pages/MoviesDetails'));

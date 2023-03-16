@@ -1,11 +1,20 @@
+import { ItemGenre, ListGenre } from 'components/MoviesList/MoviesList.styled';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Link } from './MoviesData.styled';
+import {
+  Box,
+  ContainerData,
+  Img,
+  InformationBox,
+  Link,
+  LinkList,
+} from './MoviesData.styled';
 
 export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
   return (
-    <div>
-      <div>
-        <img
+    <ContainerData>
+      <Box>
+        <Img
           src={
             url
               ? `https://image.tmdb.org/t/p/original${url}`
@@ -15,30 +24,33 @@ export const MoviesData = ({ url, tag, title, score, overview, genres }) => {
           width={300}
         />
 
-        <div>
+        <InformationBox>
           <h2>{title}</h2>
           <p>User Score: {Math.round(score * 10)}%</p>
           <h3>Overview</h3>
           <p>{overview}</p>
           <h4>Genres</h4>
-          <ul>
+
+          <ListGenre>
             {genres.map(genre => (
-              <li key={genre.id}>{genre.name}</li>
+              <ItemGenre key={genre.id}>{genre.name}</ItemGenre>
             ))}
-          </ul>
-        </div>
-      </div>
+          </ListGenre>
+        </InformationBox>
+      </Box>
       <h2>Additional information</h2>
-      <ul>
+      <LinkList>
         <li>
           <Link to="cast">Cast</Link>
         </li>
         <li>
           <Link to="reviews">Reviews</Link>
         </li>
-      </ul>
-      <Outlet />
-    </div>
+      </LinkList>
+      <Suspense>
+        <Outlet />
+      </Suspense>
+    </ContainerData>
   );
 };
 

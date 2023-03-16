@@ -7,12 +7,12 @@ const StyledLink = styled(NavLink)`
   align-items: center;
   gap: 4px;
   padding: 8px 0;
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   text-transform: uppercase;
   :hover {
-    color: blue;
+    color: lightskyblue;
   }
 `;
 
